@@ -11,7 +11,7 @@ ARG JAR_FILE=target/MyWebApp.war
 WORKDIR /opt/app
 
 # cp target/MyWebApp.war /opt/app/app.jar
-COPY ${JAR_FILE} /opt/app/
+COPY ${JAR_FILE} MyWebApp.war
 
 # java -jar /opt/app/app.jar
 ENTRYPOINT ["java","-war","MyWebApp.war"]
