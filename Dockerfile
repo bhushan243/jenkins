@@ -8,10 +8,10 @@ FROM adoptopenjdk/openjdk11:alpine-jre
 WORKDIR /opt/app
 
 # cp target/MyWebApp.war /opt/app/app.jar
-COPY MyWebApp/1.0-SNAPSHOT/MyWebApp-1.0-SNAPSHOT.war /opt/app/
+COPY MyWebApp/target/MyWebApp.war /opt/app/
 
 # java -jar /opt/app/app.jar
-ENTRYPOINT ["java","-war","MyWebApp-1.0-SNAPSHOT.war"]
+ENTRYPOINT ["java","-war","MyWebApp.war"]
 
 ## sudo docker run -p 8080:8080 -t docker-spring-boot:1.0
 ## sudo docker run -p 80:8080 -t docker-spring-boot:1.0
