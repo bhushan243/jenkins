@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: https://hub.docker.com/repository/docker/bhushan243/docker:${BUILD_NUMBER}
+        image: bhushan243/docker:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
