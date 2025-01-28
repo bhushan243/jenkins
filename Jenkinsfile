@@ -15,18 +15,5 @@ pipeline {
     
      
   }
-    post {
-        always {
-            // Clean up workspace
-            cleanWs()
-        }
-        success {
-            // Notify success (you can add email or Slack notifications here)
-            echo "Build and deployment successful."
-        }
-        failure {
-            // Notify failure
-            echo "Build or deployment failed."
-        }
-    }
+    
 }
